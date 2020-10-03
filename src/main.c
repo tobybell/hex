@@ -41,7 +41,7 @@ int usage() {
   return 1;
 }
 
-int encode() {
+int decode() {
   while (true) {
     int n = read(STDIN_FILENO, buf, sizeof (buf));
     if (!n) break;
@@ -72,7 +72,7 @@ int encode() {
   return 0;
 }
 
-int decode(bool packed) {
+int encode(bool packed) {
   int crop_length = packed ? 2 : 3;
   while (true) {
     int n = read(STDIN_FILENO, buf, sizeof (buf));
@@ -92,8 +92,8 @@ int main(int argc, const char* argv[]) {
   if (!strcmp("--help", opt) || !strcmp("-h", opt))
     return help();
   if (!strcmp("--encode", opt) || !strcmp("-e", opt))
-    return encode();
+    return encode(false);
   if (!strcmp("--decode", opt) || !strcmp("-d", opt))
-    return decode(false);
+    return decode();
   return usage();
 }

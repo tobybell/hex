@@ -1,6 +1,6 @@
 # Hex
 
-A minimal command line tool for encoding and decoding binary data using hex codes.
+A minimal command line tool for encoding and decoding hex codes.
 
 This is just a tool I created for myself because I could never remember how to
 encode or decode arbitrary hex data from the command line. You're welcome to
@@ -10,20 +10,20 @@ use it too.
 
 There are two modes, `--encode` and `--decode`.
 
-To decode a binary file `data.bin` to a text file of hex codes `data.txt`, run
+For example, to encode binary data from `data.bin` into hex in `data.txt`, run
 
 ```
-hex --decode < data.bin > data.txt
+hex --encode < data.bin > data.txt
 ```
 
-To encode a text file of hex codes `data.txt` to a binary file `data.bin`, run
+To decode hex from `data.txt` into binary data in `data.bin`, run
 
 ```
-hex --encode < data.txt > data.bin
+hex --decode < data.txt > data.bin
 ```
 
-All data flows through `stdin` and `stdout`, so you can easily compose this
-tool with whatever other programs you like.
+Note that all data flows through `stdin` and `stdout`, so you can easily
+compose this tool with whatever other programs you like.
 
 ## Installation
 
