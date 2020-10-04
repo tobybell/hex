@@ -31,8 +31,8 @@ int help() {
     "Usage: hex [OPTIONS]\n\n"
     "Options:\n"
     "  --help / -h    Show this message and exit\n"
-    "  --encode / -e  Convert hex into binary data\n"
-    "  --decode / -d  Convert binary data into hex\n");
+    "  --encode / -e  Convert binary data into hex\n"
+    "  --decode / -d  Convert hex into binary data\n");
   return 0;
 }
 
