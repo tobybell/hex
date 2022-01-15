@@ -23,7 +23,7 @@ const char hexcodes[] =
   "f0 f1 f2 f3 f4 f5 f6 f7 f8 f9 fa fb fc fd fe ff ";
 
 // Buffer to be used for reading.
-unsigned char buf[4096];
+unsigned char buf[1024 * 1024];
 
 int help() {
   dprintf(
@@ -87,7 +87,7 @@ int encode(bool packed) {
 
 int main(int argc, const char* argv[]) {
   if (argc != 2)
-    return usage();
+    return encode(true);
   const char* opt = argv[1];
   if (!strcmp("--help", opt) || !strcmp("-h", opt))
     return help();
